@@ -1,4 +1,10 @@
-/* styles.css */
+/* navbar css */
+.page-container{
+  
+    max-width: 1440px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
 .navbar {
   background-color: #f4f2f1;
   padding: 10px;
@@ -10,6 +16,8 @@
 .navbar-brand {
   color: var(--font-high-emphasis, #25282B);
   font-family: Pacifico, cursive;
+  margin: 0 auto; 
+  padding: 0 30px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -29,8 +37,10 @@
 
 .nav-item {
   display: inline-flex;
-  justify-content: flex-end; /* Change to flex-end to move links to the right */
-  align-items: center; /* Vertically align items */
+  justify-content: flex-end; 
+  margin: 0 auto; 
+  padding: 0 20px;
+  align-items: center;
   gap:30px;
  
 }
@@ -48,4 +58,62 @@
   color: #e97a0b;
   background-color:#25282B;
   transform: scale(1.3);
+}
+/*home css*/
+.home-title{
+color: var(--font-high-emphasis, #25282B);
+font-family: Playfair Display;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; 
+}
+
+.home-profession{
+  color: var(--brand-orange, #FF800B);
+  font-family: Nunito;
+  font-size: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.button-cv{
+  display: flex;
+padding: 8px 24px;
+align-items: flex-start;
+border-radius: 8px;
+background: var(--brand-orange, #FF800B);
+
+}
+.home-img{
+  width: 589px;
+height: 549px;
+flex-shrink: 0;
+border-radius: 10px;
+justify-content: flex-end;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-text {
+  flex: 1;
+ 
+}
+.home-text-info{
+  flex: 1;
+  margin-top: 10px;
+}
+
+.home-img-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }

@@ -13,27 +13,12 @@
   align-items: center;
 }
 
-.navbar-brand {
-  color: var(--font-high-emphasis, #25282B);
-  font-family: Pacifico, cursive;
+ .navbar-brand {
   margin: 0 auto; 
-  padding: 0 30px;
-  font-size: 18px;
-  font-style: normal;
+  padding: 0 30px; 
   font-weight: 400;
-  line-height: 180%; /* 32.4px */
   text-decoration: none;
 }
-
-.tokiti {
-  color: var(--brand-orange, #FF800B);
-  font-family: Pacifico;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 180%;
-}
-
 
 .nav-item {
   display: inline-flex;
@@ -67,6 +52,7 @@ font-size: 64px;
 font-style: normal;
 font-weight: 700;
 line-height: 120%; 
+
 }
 
 .home-profession{
@@ -92,8 +78,9 @@ background: var(--brand-orange, #FF800B);
 .home-img{
   width: 589px;
 height: 549px;
+margin-top: 20px;
 flex-shrink: 0;
-border-radius: 10px;
+border-radius: 50px;
 justify-content: flex-end;
 }
 
@@ -101,19 +88,38 @@ justify-content: flex-end;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 40px;
+  
 }
 
 .home-text {
-  flex: 1;
- 
+  flex: 2;
+  font-size:3ch;
 }
 .home-text-info{
-  flex: 1;
+  flex: 2;
   margin-top: 10px;
+  
 }
 
 .home-img-container {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+}
+
+/*footer css */
+/* styles.css */
+.footer {
+  background-color:  #f4f2f1;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 7ch;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 20px;
+  color: #555;
+  
 }

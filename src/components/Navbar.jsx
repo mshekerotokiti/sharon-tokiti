@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          Sharon <span className='tokiti'>Tokiti</span>
+          <img src="/logo.svg" alt="Logo" />
         </a>
       </div>
 

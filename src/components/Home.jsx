@@ -1,7 +1,7 @@
 import React from 'react';
 import About from './About';
 import Resume from './Resume';
-import Projects from './Projects';
+import Footer from './Footer';
 
 const Home = () => {
   return (

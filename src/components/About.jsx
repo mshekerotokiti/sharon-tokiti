@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import codeImage from '../icons/code.svg';
-import designImage from  '../icons/design.svg'
-import teacherImage from '../icons/teacher.svg'
+import designImage from  '../icons/design.svg';
+import teacherImage from '../icons/teacher.svg';
 
 const About = () => {
   return (
-    <div>
+    <div className='about'>
     <div className='about-container'>
       <div className='about-content'>
         <div className='about-section'>
@@ -16,7 +16,7 @@ const About = () => {
         </div>
       </div>
       <div className='about-img-container'>
-        <img src='/sharonabout.jpg' alt='about image' className='about-img' />
+        <img src='/sharon.jpg' alt='about image' className='about-img' />
       </div>
     </div>
 
@@ -39,6 +39,7 @@ const About = () => {
    <p>Being a trained teacher of Music and Kiswahili, I have found great joy in sharing my knowledge with young ones. </p>
    </div>
    </div>
+  
    </div>
   )
 }

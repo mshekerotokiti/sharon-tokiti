@@ -185,12 +185,12 @@ justify-content: flex-end;
 
 .card-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 0 auto;
   padding: 20px;
-  height: 200px;
+  justify-content: center; 
+  align-items: flex-start; 
 }
 
 .card {
@@ -213,7 +213,7 @@ padding-left: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
+  white-space: wrap;
 }
 
-@media (max-width: 768px) {} 
 

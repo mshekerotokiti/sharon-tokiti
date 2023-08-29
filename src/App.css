@@ -2,7 +2,7 @@
 /* navbar css */
 .page-container{
   background-color: antiquewhite;
-    /* max-width: 1440px; */
+  min-height: 80vh;
     margin: 0 auto; 
     padding-left:  90px;
 }
@@ -295,10 +295,108 @@ padding-left: 10px;
 }
 
 /* Media Query for Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .resume-card {
     padding: 10px;
   }
 }
 
+/*contact css */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  width: 250px;
+  
+}
+
+.contact-card h3 {
+  margin: 0;
+  font-size: 20px;
+  
+}
+
+.contact-card p {
+  margin: 10px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #FF800B;;
+  color: #0a0a0a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: #FF800B;;
+}
+
+.social-media-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 5;
+
+}
+
+.social-media-list li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.social-media-list li a:hover {
+  color: #FF800B;
+}

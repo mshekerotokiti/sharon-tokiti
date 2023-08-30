@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform form submission or validation here
-    // You can send the form data to a backend API, for example
+    
+    // Construct email body
+    const subject = encodeURIComponent('Contact Me');
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    
+    // Open default email client
+    window.open(`mailto:sharontokiti@gmail.com?subject=${subject}&body=${body}`);
+    
+    // Reset form fields
+    setName('');
+    setEmail('');
+    setMessage('');
   };
 
   return (
@@ -53,24 +67,24 @@ const Contact = () => {
       <div className="social-media-handles">
         <ul className="social-media-list">
           <li>
-            <a href="https://www.linkedin.com/sharonmshekero">
-              <i className="bi bi-linkedin"></i> LinkedIn
+            <a href="https://www.linkedin.com/in/sharon-mshekero/">
+              <i className="bi bi-linkedin"></i> 
             </a>
           </li>
     
           <li>
-            <a href="https://www.github.com/yourgithubprofile">
-              <i className="bi bi-github"></i> GitHub
+            <a href="https://github.com/mshekerotokiti">
+              <i className="bi bi-github"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com/yourtwitterprofile">
-              <i className="bi bi-twitter"></i> Twitter
+            <a href="https://twitter.com/SharonTokiti">
+              <i className="bi bi-twitter"></i> 
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com/yourtwitterprofile">
-              <i className="bi bi-medium"></i> Medium
+            <a href="https://medium.com/@sharontokiti">
+              <i className="bi bi-medium"></i>
             </a>
           </li>
         </ul>

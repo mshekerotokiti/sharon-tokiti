@@ -45,11 +45,13 @@
   background-color:#25282B;
   transform: scale(1.3);
 }
+
+
 /*home css*/
 .home-title{
 color: var(--font-high-emphasis, #25282B);
 font-family: Playfair Display;
-font-size: 64px;
+font-size: 40px;
 font-style: normal;
 font-weight: 700;
 line-height: 120%; 
@@ -77,8 +79,9 @@ background: var(--brand-orange, #FF800B);
 
 }
 .home-img{
-  width: 589px;
-height: 549px;
+  
+  width: 100%; /* Make the image responsive */
+  height: auto;
 margin-top: 20px;
 flex-shrink: 0;
 border-radius: 50px;
@@ -123,9 +126,22 @@ justify-content: flex-end;
   color: #555;
   
 }
+@media (max-width: 768px) {
+  .page-container {
+    padding-left: 20px; 
+  }
+}
+@media (max-width: 576px) {
+  
+  .page-container {
+    padding-left: 10px; 
+  }
+}
+
 /*about css*/
 .about{
   background-color: antiquewhite;
+  padding: 40px 0;
 }
 .about-img-container {
   flex: 1;
@@ -134,15 +150,14 @@ justify-content: flex-end;
   justify-content: flex-end; 
   align-items: flex-end;
   padding: 10px;
-  max-width: 200px;
-
+  max-width: 100%; /* Make sure the image is responsive */
+  text-align: center;
 }
-.about-img{
-  max-width: 300%; 
-  height: 500px;
+.about-img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Ensure the image aspect ratio is maintained */
   border-radius: 20px;
- margin-top: 25px;
-
+  margin-top: 25px;
 }
 
 .about-container {
@@ -150,7 +165,6 @@ justify-content: flex-end;
   align-items: flex-start;
   justify-content: space-between;
   max-width: 1350px;
-  
   padding: 10px;
 }
 
@@ -167,7 +181,7 @@ justify-content: flex-end;
   font-size: 24px;
   font-weight: 400;
   line-height: 190%;
-  width: 690px;
+  width: 100%; 
 
 }
 
@@ -197,11 +211,10 @@ justify-content: flex-end;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex-basis: calc(33.33% - 20px);
   margin: 10px;
-  font-size: 20px;
   font-family: Poppins;
-  height: 200px;
-
-} 
+  height: auto; /* Remove fixed height to allow content to expand */
+  padding: 20px; /* Add padding to create space for content */
+}
 
 .card h4{
  color: #FF800B;
@@ -213,8 +226,32 @@ padding-left: 10px;
   gap: 10px;
   white-space: wrap;
 }
+@media (max-width: 768px) {
+  /* Adjust styles for screens up to 768px wide (typical tablet screens) */
+  .about-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-/*resume css */
+  .card {
+    flex-basis: calc(50% - 20px);
+    font-size: 18px; /* Reduce font size for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjust styles for screens up to 576px wide (typical mobile screens) */
+  .about-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .card {
+    flex-basis: 100%;
+    font-size: 16px; /* Reduce font size for mobile screens */
+  }
+}
+/* Resume CSS */
 .resume-container {
   display: flex;
   justify-content: center;
@@ -234,17 +271,10 @@ padding-left: 10px;
   margin-top: 10px;
 }
 
-.resume-education-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
+.resume-education-section,
 .resume-work-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Ensure sections wrap on smaller screens */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -268,8 +298,9 @@ padding-left: 10px;
   color: #FF800B;
   margin-bottom: 5px;
 }
+
 .resume-item {
-  width: calc(33.33% - 10px);
+  width: 100%; /* Items take full width on mobile screens */
   margin: 9px;
   margin-bottom: 5px;
   padding: 20px;
@@ -283,7 +314,7 @@ padding-left: 10px;
 }
 
 .resume-section ul {
-  list-style-type:disc;
+  list-style-type: disc;
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
@@ -296,12 +327,21 @@ padding-left: 10px;
 
 /* Media Query for Responsive Design */
 @media (max-width: 750px) {
+  /* Adjust styles for screens up to 750px wide (typical tablet screens) */
   .resume-card {
     padding: 10px;
   }
 }
 
-/*contact css */
+@media (max-width: 576px) {
+  /* Adjust styles for screens up to 576px wide (typical mobile screens) */
+  .resume-card {
+    padding: 10px;
+  }
+}
+
+
+/* Contact CSS */
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -320,10 +360,10 @@ padding-left: 10px;
 
 .contact-cards {
   display: flex;
+  flex-wrap: wrap; /* Ensure cards wrap to the next line on smaller screens */
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
-  
 }
 
 .contact-card {
@@ -332,14 +372,12 @@ padding-left: 10px;
   text-align: center;
   border-radius: 10px;
   background-color: #e4e4e4;
-  width: 250px;
-  
+  width: 100%; /* Cards take full width on mobile screens */
 }
 
 .contact-card h3 {
   margin: 0;
   font-size: 20px;
-  
 }
 
 .contact-card p {
@@ -369,7 +407,7 @@ padding-left: 10px;
 }
 
 button {
-  background-color: #FF800B;;
+  background-color: #FF800B;
   color: #0a0a0a;
   border: none;
   padding: 10px 20px;
@@ -379,7 +417,7 @@ button {
 }
 
 .form-group button:hover {
-  background-color: #FF800B;;
+  background-color: #FF800B;
 }
 
 .social-media-list {
@@ -388,7 +426,6 @@ button {
   list-style: none;
   padding: 0;
   margin: 20px 5;
-
 }
 
 .social-media-list li a {
@@ -402,3 +439,69 @@ button {
 .social-media-list li a:hover {
   color: #FF800B;
 }
+
+/* Media Query for Responsive Design */
+@media (max-width: 576px) {
+  /* Adjust styles for screens up to 576px wide (typical mobile screens) */
+  .contact-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contact-card {
+    width: calc(50% - 20px); /* Cards take half width on mobile screens */
+  }
+}
+
+/*projects css */
+/* Add this CSS code to your project's stylesheet */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.project {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(33.33% - 20px); /* Three projects per row, with spacing */
+  margin: 10px;
+  padding: 20px;
+  font-family: Poppins;
+}
+
+.project h2 {
+  color: #FF800B;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.project img {
+  width: 100px; /* Set the desired width for the project images */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  border-radius: 8px;
+}
+
+.project p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .project {
+    flex-basis: calc(50% - 20px); /* Two projects per row on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .project {
+    flex-basis: 100%; /* One project per row on mobile screens */
+  }
+}
+

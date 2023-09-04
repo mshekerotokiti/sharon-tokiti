@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 const Home = () => {
   const handleDownloadCV = () => {
-    // Replace this with the actual URL of your CV file
+  
     const cvUrl = 'https://drive.google.com/file/d/11Bz92Mgm_1CqP193gXOMTAS9lAvBgn4w/view?usp=sharing';
 
     const downloadLink = document.createElement('a');
@@ -24,7 +24,7 @@ const Home = () => {
           <button className='button-cv' onClick={handleDownloadCV}>Download CV</button>
        </div>
         <div className="home-img-container">
-          <img src='/sharonhome.jpg' alt='sharon photo' className='home-img'/>
+          <img src='/sharon.jpg' alt='sharon photo' className='home-img'/>
         </div>
    </div>
    </div>

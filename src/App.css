@@ -457,36 +457,37 @@ button {
 /* Add this CSS code to your project's stylesheet */
 
 .projects {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
   padding: 20px;
 }
 
-.project {
+.project-card {
   background-color: #f0f0f0;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex-basis: calc(33.33% - 20px); /* Three projects per row, with spacing */
+  flex-basis: calc(29.33% - 20px); /* Three projects per row, with spacing */
   margin: 10px;
+  width: 30%;
   padding: 20px;
   font-family: Poppins;
 }
 
-.project h2 {
+.project-card h2 {
   color: #FF800B;
   margin-bottom: 10px;
   font-size: 18px;
+  text-decoration: none;
 }
 
-.project img {
-  width: 100px; /* Set the desired width for the project images */
-  height: auto; /* Automatically adjust the height to maintain aspect ratio */
-  border-radius: 8px;
+.project-image {
+  max-width: 100%;
+  width: 20%; /* Make the image responsive */
+  height: auto; /* Ensure the image aspect ratio is maintained */
+  border-radius: 50px;
 }
 
-.project p {
+.project-card p {
   margin: 10px 0;
   font-size: 16px;
   color: #555;
@@ -494,14 +495,13 @@ button {
 
 /* Media Query for Responsive Design */
 @media (max-width: 768px) {
-  .project {
+  .project-card {
     flex-basis: calc(50% - 20px); /* Two projects per row on smaller screens */
   }
 }
 
 @media (max-width: 576px) {
-  .project {
+  .project-card {
     flex-basis: 100%; /* One project per row on mobile screens */
   }
 }
-

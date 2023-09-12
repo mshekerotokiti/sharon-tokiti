@@ -10,7 +10,7 @@ const projectsData = [
   {
     title: 'Totu Event',
     description: 'This is a project aimed at helping event organizers plan events and asslo allow users get events information with ease and book for seat in the events',
-    link: 'https://consolattachepchirchir.github.io/events',
+    link: 'https://consolattachepchirchir.github.io/ToTu-Event/',
     image: './totuevent.png', // Replace with the actual image file path or URL
   },
   // Add more projects here
@@ -22,13 +22,16 @@ function Projects() {
       <h1>My Projects</h1>
       <div className="projects-list">
         {projectsData.map((project, index) => (
-          <div className="project" key={index}>
+          <div className="project-card" key={index}>
             <h2>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 {project.title}
               </a>
             </h2>
-            <img src={project.image} alt={`${project.title} Image`} />
+            
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <img src={project.image} alt={`${project.title} Image`}  className="project-image" /> 
+            </a>
             <p>{project.description}</p>
           </div>
         ))}

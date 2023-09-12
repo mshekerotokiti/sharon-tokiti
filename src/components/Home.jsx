@@ -1,7 +1,4 @@
 import React from 'react';
-import About from './About';
-import Resume from './Resume';
-import Footer from './Footer';
 
 const Home = () => {
   const handleDownloadCV = () => {
